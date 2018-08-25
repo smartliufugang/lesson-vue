@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<!-- This is lesson2 vue -->
+<div id="app">
+  <span>{{name}}</span>
+  <!-- 下面展示的是vue的控制流指令v-if /v-else-if/v-else -->
+  <template v-if="liufugang=='He studies every day'">
+    I  think liufugang is a very good web front-end development engineer
+  </template>
+  <template v-else-if="liufugang=='he do not studies every day'"> I  think liufugang is a very good web front-end development engineer</template>
+  <template v-else>I  think liufugang is a very good web front-end development engineer</template>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script src="js/index.js"></script>
+</html>
