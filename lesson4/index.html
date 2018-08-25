@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style media="screen">
+  .liked{
+    background:red;
+  }
+</style>
+<body>
+  <div id="app">
+    <alert></alert>
+  </div>
+<template id="alert_component">
+  <button :class={liked:liked} @click='on_click'>{{click_count}}</button>
+</template>
+<!-- 学习日志 -->
+</body>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script src="js/index.js"></script>
+</html>
