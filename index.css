@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+/* height: 300px; 
+这里的父级的元素去除他的高度，因为子集元素都浮动了，所以去除高度
+的父级的元素就没有了高度，所以要显示父级的元素的情况需要先要清除一下浮动 */
+width: 300px;
+background:rgba(13, 126, 28, 0.933);
+}
+.h1{
+    width: 100px;
+    height:100px;
+    border:1px solid orange;
+    background: #555555;
+    float: left;
+}
+.h2{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color:red;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear:both;/*这里的clear：both用来清除元素的浮动*/
+}
+/* 下面这个是用flexbox弹性布局的方式进行布局
+好处就是不用再单独定义一个清除的类 */
+.container2{
+    height:300px;
+    width:300px;
+    background-color:#666666;
+    margin:10px 200px;
+    /* 这里给父级的元素加入flex */
+    display:flex;
+    /* flex默认的布局就是从左到右的方式 */
+   
+    
+}
+.h3{
+    height:200px;
+    width:200px;
+    background-color:orange;
+    flex-shrink:0;
+}
+.h4{
+    height:200px;
+    width: 200px;
+    background-color:yellowgreen;
+    flex-shrink:0;
+}
+/* 这里的h3和h4都加了flex-shrink这个属性值等于0所以就没有将这两个
+元素进行缩放，默认的flex布局中的flex-shrink的默认值是1
+shrink：收缩（中文翻译） */
+/*  */
+.flex{
+    height:400px;
+    width:400px;
+    background-color: #666666;
+    display:flex;
+    /* flex-direction:row; */
+    /* flex-direction决定的是主轴线的方向：row决定的是主轴线从左向右
+    进行排列的 */
+    flex-direction:column;
+    /* flex-direction中的row-reverse这个属性值决定了flex主轴线
+    从右向左进行排列的 */
+    /* flex-direction:的属性值有四种
+    1row：主轴线从左向右进行排列
+    2row-reverse：主轴线从右向左进行排列
+    3 column:英文翻译是柱的意思，这里的意思就是侧轴
+    它可以让元素能够从上到下进行排列*/
+    /* reverse：英文翻译是相反 */
+
+}
+.item{
+    height:200px;
+    width:100px;
+    margin-left:2px;
+    margin-top:2px;
+    background:orangered;
+}
+/* 注意：
+     flex-wrap：是让元素是不是换行的属性 */
